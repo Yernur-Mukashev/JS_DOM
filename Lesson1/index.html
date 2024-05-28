@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="title">Lorem ipsum dolor.</h1>
+    <h2 id="heading">Lorem ipsum dolor sit amet.</h2>
+    <ul class="ul">
+        <li class="list">text 1</li>
+        <li class="list">text 2</li>
+        <li class="list">text 3</li>
+    </ul>
+    <p class="text">Lorem ipsum dolor sit.1</p>
+    <p class="text">Lorem ipsum dolor sit.2</p>
+    <p class="text">Lorem ipsum dolor sit.3</p>
+    <button class="btn">Купить</button>
+    <div class="content">
+
+    </div>
+<img class="img" src="photo.jpg" alt="photo">
+
+    <script>
+        // const listEls = document.getElementsByClassName('list');
+        // console.log(listEls);
+        // const listElsQS = document.querySelectorAll('.list');
+        // console.log(listElsQS);
+        // const listElsTag = document.getElementsByTagName('li');
+        // console.log(listElsTag);
+        // const heading3 = document.querySelector('#heading');
+        // console.log(heading3);
+        // const heading = document.querySelector('.title');
+        // const text = document.querySelectorAll('.text');
+        // text.forEach(element => {
+        //     console.log(element);
+        // });
+
+        const titleEl = document.querySelector('.title');
+        titleEl.textContent = 'Заголовок из JS';
+        const heading2 = document.querySelector('#heading');
+        heading2.remove();
+
+        const buttonEl = document.querySelector('.btn');
+        const contentEl = document.querySelector('.content');
+        const imgEl = document.querySelector('.img');
+        
+        imgEl.onclick = function () {
+            imgEl.src = ' newphoto.jpg';
+        }
+
+        const textEl = document.createElement('p');
+        textEl.textContent = 'Тут есть текст';
+
+        buttonEl.onclick = function () {
+            buttonEl.textContent = 'Товар в корзине';
+            contentEl.appendChild(textEl);
+        }
+
+
+
+    </script>
+</body>
+
+</html>
